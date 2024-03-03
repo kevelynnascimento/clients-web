@@ -1,0 +1,88 @@
+.container {
+    padding: 110px 0px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-title {
+    margin: 0;
+}
+
+.button {
+    width: 100%;
+    padding: 25px 25px;
+}
+
+.card-container {
+    padding: 30px 30px;
+}
+
+.form-header {
+    padding-bottom: 25px
+}
+
+.form {
+    padding: 30px 0px;
+}
+
+.field-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.divider-block {
+    padding: 30px 0px;
+}
+
+.input-field {
+    width: 100%;
+}
+
+.form-field-code {
+    width: 15%;
+}
+
+.form-field-name {
+    width: 45%;
+}
+
+.form-field-email {
+    width: 40%;
+}
+
+.form-field-cpf {
+    width: 25%;
+}
+
+.form-field-private-phone-number {
+    width: 25%;
+}
+
+.form-field-phone-number {
+    width: 25%;
+}
+
+.form-field-gender {
+    width: 25%;
+}
+
+.form-field-date {
+    width: 20%;
+}
+
+.form-field-observation {
+    width: 70%;
+}
+
+.form-field-check {
+    padding-top: 5px;
+    width: 10%;
+}

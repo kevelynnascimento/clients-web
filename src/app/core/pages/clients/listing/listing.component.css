@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    padding: 30px 0px 30px 0px;
+}
+
+.add-button {
+    padding: 25px 25px;
+}
+
+.table-container {
+    padding: 30px 30px;
+}
+
+.listing-page {
+    padding-bottom: 30px;
+}
