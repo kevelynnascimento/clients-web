@@ -10,7 +10,7 @@ import { ClientCreationRequest } from '../../dtos/clients/requests/client-creati
   providedIn: 'root',
 })
 export class ClientsService {
-  private apiUrl = 'http://localhost:8080/clients';
+  private apiUrl = 'https://clients-api-s1uo.onrender.com/clients';
 
   constructor(private http: HttpClient) {}
 
