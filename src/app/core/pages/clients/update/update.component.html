@@ -1,4 +1,8 @@
-<div class="container">
+<div *ngIf="loading" class="spinner-container">
+    <mat-spinner class="spinner-item" [diameter]="60"></mat-spinner>
+</div>
+
+<div *ngIf="!loading" class="container">
     <div class="card-container mat-elevation-z8">
         <div>
             <h3 class="mat-headline-5 page-title">Edição de participante</h3>

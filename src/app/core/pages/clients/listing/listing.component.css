@@ -18,4 +18,13 @@ table {
 
 .listing-page {
     padding-bottom: 30px;
+
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 21rem;
 }

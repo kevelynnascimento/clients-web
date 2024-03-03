@@ -1,28 +1,30 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { ClientsService } from '../../../services/clients/clients.service';
-import { ClientsContextService } from '../../../services/clients/clients-context.service';
-import { ClientFindingResponse } from '../../../dtos/clients/responses/client-finding.response';
-import { FormControl, FormGroup } from '@angular/forms';
-import moment from 'moment';
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { ClientsService } from "../../../services/clients/clients.service";
+import { ClientsContextService } from "../../../services/clients/clients-context.service";
+import { ClientFindingResponse } from "../../../dtos/clients/responses/client-finding.response";
+import { FormControl, FormGroup } from "@angular/forms";
+import moment from "moment";
 
 @Component({
-  selector: 'app-preview',
-  templateUrl: './preview.component.html',
-  styleUrl: './preview.component.css',
+  selector: "app-preview",
+  templateUrl: "./preview.component.html",
+  styleUrl: "./preview.component.css",
 })
 export class PreviewComponent {
+  public loading: boolean = true;
+
   public clientForm: FormGroup = new FormGroup({
-    code: new FormControl({ value: '', disabled: true }),
-    name: new FormControl({ value: '', disabled: true }),
-    email: new FormControl({ value: '', disabled: true }),
-    documentNumber: new FormControl({ value: '', disabled: true }),
-    phoneNumber: new FormControl({ value: '', disabled: true }),
-    cellphoneNumber: new FormControl({ value: '', disabled: true }),
-    gender: new FormControl({ value: '', disabled: true }),
-    observation: new FormControl({ value: '', disabled: true }),
-    isActive: new FormControl({ value: '', disabled: true }),
-    birthday: new FormControl({ value: '', disabled: true }),
+    code: new FormControl({ value: "", disabled: true }),
+    name: new FormControl({ value: "", disabled: true }),
+    email: new FormControl({ value: "", disabled: true }),
+    documentNumber: new FormControl({ value: "", disabled: true }),
+    phoneNumber: new FormControl({ value: "", disabled: true }),
+    cellphoneNumber: new FormControl({ value: "", disabled: true }),
+    gender: new FormControl({ value: "", disabled: true }),
+    observation: new FormControl({ value: "", disabled: true }),
+    isActive: new FormControl({ value: "", disabled: true }),
+    birthday: new FormControl({ value: "", disabled: true }),
   });
 
   public client: ClientFindingResponse = {} as ClientFindingResponse;
@@ -38,11 +40,13 @@ export class PreviewComponent {
   }
 
   private async load() {
+    this.loading = true;
     const id = this.clientsContextService.getClientId();
 
     if (id) {
       const client = (this.client = await this.clientsService.findById(id));
       this.buildForm(client);
+      this.loading = false;
     }
   }
 
@@ -66,6 +70,6 @@ export class PreviewComponent {
   }
 
   public navigateBack() {
-    this.router.navigate(['/participantes']);
+    this.router.navigate(["/participantes"]);
   }
 }

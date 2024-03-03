@@ -20,6 +20,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const routes: Routes = [
   { path: '', component: ListingComponent },
@@ -57,6 +58,8 @@ const routes: Routes = [
     MatMenuModule,
     ReactiveFormsModule,
     DatePipe,
+    MatProgressSpinnerModule,
+    
   ],
   exports: [RouterModule],
 })
